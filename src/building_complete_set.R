@@ -200,6 +200,10 @@ ggplot(complete_year_sent, aes(Year, sentiment)) + geom_point(color = "blue")+ g
 complete_year_sent_notekashi <-  do.call("rbind", list(sentiment_by_year_drake, sentiment_by_year_leandoer,
                                              sentiment_by_year_migos, sentiment_by_year_post, 
                                              sentiment_by_year_thug, sentiment_by_year_yachty))
+
+write.csv(complete_year_sent_notekashi, "/Users/ericbrigham/Desktop/datamining/project/completenotekashi.csv")
+
+
 #graph per year
 ggplot(complete_year_sent_notekashi, aes(Year, sentiment)) + geom_point()
 
